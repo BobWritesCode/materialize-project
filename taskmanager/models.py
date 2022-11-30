@@ -1,4 +1,7 @@
-from taskmanager import db
+from taskmanager import db #, app
+# from sqlalchemy import create_engine
+# from sqlalchemy.orm import sessionmaker
+# import os
 
 class Category(db.Model):
     # schema for the Category model
@@ -25,3 +28,11 @@ class Task(db.Model):
         return "#{0} - Task: {1} | Urgent: {2}".format(
             self.id, self.task_name, self.is_urgent
         )
+
+
+# Used to update the database with the current classes above.
+# engine = create_engine("postgresql://postgres:"+os.environ.get("SECRET_KEY")+"!@localhost/taskmanager")
+# Session = sessionmaker(engine)
+# session = Session()
+# with app.app_context():
+#     db.create_all()
