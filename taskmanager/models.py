@@ -31,7 +31,7 @@ class Task(db.Model):
 
 
 # Used to update the database with the current classes above.
-# engine = create_engine("postgresql://postgres:"+os.environ.get("SECRET_KEY")+"!@localhost/taskmanager")
+# engine = create_engine(os.environ.get("DB_URL"))
 # Session = sessionmaker(engine)
 # session = Session()
 # with app.app_context():
